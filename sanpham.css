@@ -1,0 +1,57 @@
+.logo img {
+  width: 150px;
+  height: auto;
+  margin-left: 50%;
+  display: block;
+}
+.search_bar {
+  text-align: right;
+  margin: 10px;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: palevioletred;
+}
+ul li a:link {
+  color: blue;
+}
+.product-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  transition: transform 0.3s;
+}
+.product-keyboards {
+  width: 250px;
+  height: auto;
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+}
+.product-keyboards img {
+  width: 200px;
+  height: 150px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+.product-keyboards:hover {
+  transform: scale(1.05);
+}
+
+input {
+  margin: 5px;
+}
