@@ -1,3 +1,6 @@
+html {
+  background-image: linear-gradient(#8ec5fc, #e0c3fc);
+}
 .logo img {
   width: 150px;
   height: auto;
@@ -31,13 +34,14 @@ main {
 }
 .product-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
   transition: transform 0.3s;
 }
-.product-keyboards {
-  width: 250px;
+.product {
+  width: 200px;
   height: auto;
   text-align: center;
   background-color: #f9f9f9;
