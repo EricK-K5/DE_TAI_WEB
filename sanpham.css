@@ -32,7 +32,7 @@ ul li a:link {
   gap: 20px;
   transition: transform 0.3s;
 }
-.product-keyboards {
+.product {
   width: 250px;
   height: auto;
   text-align: center;
@@ -41,14 +41,14 @@ ul li a:link {
   border-radius: 10px;
   padding: 10px;
 }
-.product-keyboards img {
+.product img {
   width: 200px;
   height: 150px;
   border-radius: 5px;
   object-fit: cover;
   margin: 0 auto;
 }
-.product-keyboards:hover {
+.product:hover {
   transform: scale(1.05);
 }
 
