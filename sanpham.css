@@ -1,36 +1,68 @@
 html {
   background-image: linear-gradient(#8ec5fc, #e0c3fc);
 }
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: #dbeafe;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+body {
+  font-family: "Arial", "Helvetica", "Poppins", sans-serif;
+  color: #333;
+}
+
 .logo img {
   width: 150px;
   height: auto;
-  margin-left: 50%;
-  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: #cfe3ff;
 }
 .search_bar {
-  text-align: right;
-  margin: 10px;
-}
-ul {
   display: flex;
-  justify-content: center;
-  list-style: none;
+  align-items: center;
+  gap: 10px;
+}
+.search_bar input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.search_bar button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.search_bar button:hover {
+  background-color: #0056b3;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
   gap: 30px;
 }
 
-a {
+nav a {
   text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-ul li a:hover {
+nav a:hover {
   color: palevioletred;
-}
-ul li a:link {
-  color: blue;
 }
 
 main {
-  margin: 10px;
+  margin: 30px auto;
+  max-width: 1200px;
+  text-align: center;
 }
 .product-container {
   display: flex;
@@ -61,6 +93,22 @@ main {
   transform: scale(1.05);
 }
 
-input {
-  margin: 5px;
+.product input {
+  width: 60%;
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+.product button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.product button:hover {
+  background-color: #ff4500;
 }
