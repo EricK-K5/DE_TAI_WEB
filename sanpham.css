@@ -25,6 +25,10 @@ ul li a:hover {
 ul li a:link {
   color: blue;
 }
+
+main {
+  margin: 10px;
+}
 .product-container {
   display: flex;
   justify-content: center;
