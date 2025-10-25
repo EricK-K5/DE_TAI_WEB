@@ -32,7 +32,7 @@ ul li a:link {
   gap: 20px;
   transition: transform 0.3s;
 }
-.product {
+.product-keyboards {
   width: 250px;
   height: auto;
   text-align: center;
