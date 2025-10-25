@@ -41,16 +41,17 @@ main {
   transition: transform 0.3s;
 }
 .product {
-  width: 200px;
+  width: 250px;
   height: auto;
   text-align: center;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 10px;
+  border: 1px solid black;
 }
 .product img {
-  width: 200px;
+  width: 250px;
   height: 150px;
   border-radius: 5px;
   object-fit: cover;
