@@ -20,9 +20,8 @@ body {
 .logo img {
   width: 150px;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  background-color: #cfe3ff;
+  display: flex;
+  justify-content: flex-start;
 }
 .search_bar {
   display: flex;
@@ -44,6 +43,12 @@ body {
 }
 .search_bar button:hover {
   background-color: #0056b3;
+}
+nav {
+  margin-top: -100px;
+}
+.search_bar {
+  margin-top: -100px;
 }
 nav ul {
   display: flex;
