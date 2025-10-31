@@ -1,5 +1,7 @@
 html {
-  background-image: linear-gradient(#8ec5fc, #e0c3fc);
+  background: linear-gradient(135deg, #8ec5fc, #e0c3fc, #cfd9df, #e2ebf0);
+  background-attachment: fixed;
+  background-size: cover;
 }
 header {
   display: flex;
@@ -12,6 +14,7 @@ header {
 body {
   font-family: "Arial", "Helvetica", "Poppins", sans-serif;
   color: #333;
+  margin: 0px;
 }
 
 .logo img {
