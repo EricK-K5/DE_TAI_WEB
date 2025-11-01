@@ -25,8 +25,8 @@ header {
   z-index: 1000;
 } */
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: auto;
 }
 a {
   text-decoration: none;
@@ -107,61 +107,6 @@ a {
   border-radius: 8px;
   cursor: pointer;
 }
-
-/* MAIN */
-/* 
-main {
-  margin: 30px auto;
-  max-width: 1200px;
-  text-align: center;
-}
-.product-container {
-  display: flex;
-  justify-content: space-around;
-  align-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-  transition: transform 0.3s;
-}
-.product {
-  width: 250px;
-  height: auto;
-  text-align: center;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 10px;
-  border: 1px solid black;
-}
-.product img {
-  width: 250px;
-  height: 150px;
-  border-radius: 5px;
-  object-fit: cover;
-  margin: 0 auto;
-}
-.product:hover {
-  transform: scale(1.01);
-}
-.product input {
-  width: 60%;
-  padding: 5px;
-  margin: 5px 0;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-}
-.product button {
-  background-color: #ff6600;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.product button:hover {
-  background-color: #ff4500;
-} */
 
 /* MAIN */
 main {
