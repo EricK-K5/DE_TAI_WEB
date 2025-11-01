@@ -3,55 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="sanpham.css" />
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sen:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/css/sanpham.css" />
 
     <title>Sản Phẩm</title>
   </head>
-  <body>
-    <header>
-      <div class="logo">
-        <a href="./trangchu.html"
-          ><img src="./image/Logo/xoane.png" alt="Logo"
-        /></a>
-      </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="trangchu.html">
-              <i class="fa-solid fa-house"></i>Trang Chủ</a
-            >
-          </li>
-          <li>
-            <a href="dangnhap.html">
-              <i class="fa-solid fa-right-to-bracket"></i>Đăng Nhập</a
-            >
-          </li>
-          <li>
-            <a href="dangky.html"
-              ><i class="fa-solid fa-right-from-bracket"></i>Đăng Ký</a
-            >
-          </li>
-          <li>
-            <a href="sanpham.html">
-              <i class="fa-brands fa-product-hunt"></i>Sản Phẩm</a
-            >
-          </li>
-          <li>
-            <a href="giohang.html">
-              <i class="fa-solid fa-cart-shopping"></i>Giỏ Hàng</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <div class="search_bar">
-        <input type="text" placeholder="Tìm kiếm sản phẩm" />
-        <button>Tìm</button>
+  <body style="height: 10000px">
+    <header class="header fixed">
+      <div class="main-content">
+        <div class="body">
+          <img src="./image/Logo/xoane.png" alt="logo" class="logo" />
+          <nav class="nav">
+            <ul>
+              <li><a href="">Trang Chủ</a></li>
+              <li><a href="">Sản Phẩm</a></li>
+              <li><a href="">Giỏ Hàng</a></li>
+            </ul>
+          </nav>
+          <!-- Tao nut bam Sign Up -->
+          <div class="action">
+            <a href="" class="btn btn-signup">Đăng Nhập</a>
+            <a href="" class="btn btn-signup">Đăng Ký</a>
+          </div>
+          <div class="search_bar">
+            <input type="text" placeholder="Tìm kiếm sản phẩm" />
+            <button>Tìm</button>
+          </div>
+        </div>
       </div>
     </header>
+
     <main>
       <h1 class="text">Chào Mừng Bạn Đến Với Sản Phẩm Của Cửa Hàng</h1>
       <section class="product-list">
