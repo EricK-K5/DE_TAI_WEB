@@ -3,121 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- FAVICON -->
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="./ico/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="./ico/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="./ico/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="./ico/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="./ico/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="./ico/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="./ico/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="./ico/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./ico/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="./ico/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./ico/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="./ico/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./ico/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./ico/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-    <!-- Reset CSS -->
     <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/sanpham.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sen:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/css/sanpham.css" />
-
+    <link rel="stylesheet" href="/margin collapse/style.css" />
     <title>Sản Phẩm</title>
   </head>
-  <body style="height: 10000px">
-    <header class="header fixed">
-      <div class="main-content">
-        <div class="logo">
-          <img src="./image/Logo/xoane.png" width="120px" />
-        </div>
+
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="logo">
+        <img src="./image/Logo/xoane.png" alt="Logo" />
       </div>
-      <nav class="d_h">
-        <a href="#" class="trang_chu">Trang chủ</a>
-        <a href="#" class="san_pham">Sản phẩm</a>
-        <a href="#" class="gio_hang">Giỏ hàng</a>
-        <a href="/dangky.html" target="_blank" class="dang_ky">Đăng ký</a>
-        <a href="#" class="dang_nhap">Đăng nhập</a>
+
+      <nav class="nav-menu">
+        <a href="#" class="nav-menu__item">Trang chủ</a>
+        <a href="#" class="nav-menu__item">Sản phẩm</a>
+        <a href="#" class="nav-menu__item">Giỏ hàng</a>
+        <a href="/dangky.html" target="_blank" class="nav-menu__item"
+          >Đăng ký</a
+        >
+        <a href="#" class="nav-menu__item">Đăng nhập</a>
       </nav>
-      <div class="hamburger-menu">
+
+      <div class="menu-toggle">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
-      <div class="search_bar">
+
+      <div class="header-search">
         <input type="text" placeholder="Tìm kiếm sản phẩm" />
         <button>Tìm</button>
       </div>
     </header>
+
+    <!-- MAIN -->
     <main>
-      <h1 class="text">Sản Phẩm Của Cửa Hàng</h1>
-      <section class="product-list">
+      <h1>Sản Phẩm Của Cửa Hàng</h1>
+
+      <!-- DANH SÁCH BÀN PHÍM -->
+      <section class="product-section">
         <h2>Danh sách sản phẩm bàn phím</h2>
-        <div class="product-container">
-          <article class="product">
+        <div class="product-grid">
+          <article class="product-card">
             <img
               src="./image/keyboard/aleksandr-eremin-sFXUDs2C2Ic-unsplash.jpg"
               alt="banphim1"
@@ -127,7 +60,8 @@
             <input type="number" placeholder="Nhập số lượng" min="0" />
             <button>Thêm vào giỏ</button>
           </article>
-          <article class="product">
+
+          <article class="product-card">
             <img
               src="./image/keyboard/hannes-kottner-ZralYhzHCjc-unsplash.jpg"
               alt="banphim2"
@@ -138,67 +72,73 @@
             <input type="number" placeholder="Nhập số lượng" min="0" />
             <button>Thêm vào giỏ</button>
           </article>
-          <article class="product">
+
+          <article class="product-card">
             <img
               src="./image/keyboard/jan-loyde-cabrera-qrjaZ0T55Fk-unsplash.jpg"
-              alt="banphim2"
+              alt="banphim3"
             />
-            <h3>Bàn phím B</h3>
+            <h3>Bàn phím C</h3>
             <p>Mô tả:</p>
             <p>Giá</p>
             <input type="number" placeholder="Nhập số lượng" min="0" />
             <button>Thêm vào giỏ</button>
           </article>
-          <article class="product">
+
+          <article class="product-card">
             <img
               src="./image/keyboard/jan-loyde-cabrera-h5ynz6keckM-unsplash.jpg"
-              alt="banphim2"
+              alt="banphim4"
             />
-            <h3>Bàn phím B</h3>
+            <h3>Bàn phím D</h3>
             <p>Mô tả:</p>
             <p>Giá</p>
             <input type="number" placeholder="Nhập số lượng" min="0" />
             <button>Thêm vào giỏ</button>
           </article>
-          <article class="product">
+
+          <article class="product-card">
             <img
               src="./image/keyboard/jan-loyde-cabrera-yLTVhSSoAx4-unsplash.jpg"
-              alt="banphim2"
+              alt="banphim5"
             />
-            <h3>Bàn phím B</h3>
+            <h3>Bàn phím E</h3>
             <p>Mô tả:</p>
             <p>Giá</p>
             <input type="number" placeholder="Nhập số lượng" min="0" />
             <button>Thêm vào giỏ</button>
           </article>
-          <article class="product">
+
+          <article class="product-card">
             <img
               src="./image/keyboard/jan-loyde-cabrera-p5rgceFiOH0-unsplash.jpg"
-              alt="banphim2"
+              alt="banphim6"
             />
-            <h3>Bàn phím B</h3>
+            <h3>Bàn phím F</h3>
             <p>Mô tả:</p>
             <p>Giá</p>
             <input type="number" />
             <button>Thêm vào giỏ</button>
           </article>
-          <article class="product">
+
+          <article class="product-card">
             <img
               src="./image/keyboard/ethan-olarte-rUt1Z4Iag8M-unsplash.jpg"
-              alt="banphim2"
+              alt="banphim7"
             />
-            <h3>Bàn phím B</h3>
+            <h3>Bàn phím G</h3>
             <p>Mô tả:</p>
             <p>Giá</p>
             <input type="number" placeholder="Nhập số lượng" min="0" />
             <button>Thêm vào giỏ</button>
           </article>
-          <article class="product">
+
+          <article class="product-card">
             <img
               src="./image/keyboard/joey-r-syRQqk4ory4-unsplash.jpg"
-              alt="banphim2"
+              alt="banphim8"
             />
-            <h3>Bàn phím B</h3>
+            <h3>Bàn phím H</h3>
             <p>Mô tả:</p>
             <p>Giá</p>
             <input type="number" placeholder="Nhập số lượng" min="0" />
@@ -206,10 +146,12 @@
           </article>
         </div>
       </section>
-      <section class="product-list">
+
+      <!-- DANH SÁCH CHUỘT -->
+      <section class="product-section">
         <h2>Danh sách sản phẩm chuột</h2>
-        <div class="product-container">
-          <article class="product">
+        <div class="product-grid">
+          <article class="product-card">
             <img
               src="/image/Mouse/auguras-pipiras-d62p4lEN4R0-unsplash.jpg"
               alt="Mouse1"
@@ -219,72 +161,79 @@
             <input type="number" placeholder="Nhập số lượng" min="0" />
             <button>Thêm vào giỏ</button>
           </article>
-          <article class="product">
+
+          <article class="product-card">
             <img
               src="/image/Mouse/davidson-l-u-n-a-m9BpcOG4vus-unsplash.jpg"
-              alt="Mouse1"
+              alt="Mouse2"
             />
-            <h3>Chuột A</h3>
+            <h3>Chuột B</h3>
             <p>Giá</p>
             <input type="number" placeholder="Nhập số lượng" min="0" />
             <button>Thêm vào giỏ</button>
           </article>
-          <article class="product">
+
+          <article class="product-card">
             <img
               src="/image/Mouse/andrey-matveev-TfxQ1k9Ecpw-unsplash.jpg"
-              alt="Mouse1"
+              alt="Mouse3"
             />
-            <h3>Chuột A</h3>
+            <h3>Chuột C</h3>
             <p>Giá</p>
             <input type="number" placeholder="Nhập số lượng" min="0" />
             <button>Thêm vào giỏ</button>
           </article>
-          <article class="product">
+
+          <article class="product-card">
             <img
               src="/image/Mouse/juairia-islam-shefa-Tqynr9ahdX0-unsplash.jpg"
-              alt="Mouse1"
+              alt="Mouse4"
             />
-            <h3>Chuột A</h3>
+            <h3>Chuột D</h3>
             <p>Giá</p>
             <input type="number" placeholder="Nhập số lượng" min="0" />
             <button>Thêm vào giỏ</button>
           </article>
-          <article class="product">
+
+          <article class="product-card">
             <img
               src="/image/Mouse/pascal-m-4PchFKrUw84-unsplash.jpg"
-              alt="Mouse1"
+              alt="Mouse5"
             />
-            <h3>Chuột A</h3>
+            <h3>Chuột E</h3>
             <p>Giá</p>
             <input type="number" placeholder="Nhập số lượng" min="0" />
             <button>Thêm vào giỏ</button>
           </article>
-          <article class="product">
+
+          <article class="product-card">
             <img
               src="/image/Mouse/sebastiaan-chia-5oHHcAgOzzk-unsplash.jpg"
-              alt="Mouse1"
+              alt="Mouse6"
             />
-            <h3>Chuột A</h3>
+            <h3>Chuột F</h3>
             <p>Giá</p>
             <input type="number" placeholder="Nhập số lượng" min="0" />
             <button>Thêm vào giỏ</button>
           </article>
-          <article class="product">
+
+          <article class="product-card">
             <img
               src="/image/Mouse/stefen-tan-ndUby2p2ptY-unsplash.jpg"
-              alt="Mouse1"
+              alt="Mouse7"
             />
-            <h3>Chuột A</h3>
+            <h3>Chuột G</h3>
             <p>Giá</p>
             <input type="number" placeholder="Nhập số lượng" min="0" />
             <button>Thêm vào giỏ</button>
           </article>
-          <article class="product">
+
+          <article class="product-card">
             <img
               src="/image/Mouse/shagal-sajid-Ox7mSmsljkc-unsplash.jpg"
-              alt="Mouse1"
+              alt="Mouse8"
             />
-            <h3>Chuột A</h3>
+            <h3>Chuột H</h3>
             <p>Giá</p>
             <input type="number" placeholder="Nhập số lượng" min="0" />
             <button>Thêm vào giỏ</button>

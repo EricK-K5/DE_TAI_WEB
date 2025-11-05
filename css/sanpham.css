@@ -1,66 +1,75 @@
+/* ========== RESET & CƠ BẢN ========== */
 * {
   box-sizing: border-box;
 }
-
 html {
+  background-image: url(/image/bg/br.jpg);
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
   font-size: 62.5%;
 }
-
 body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
+  margin: 0;
 }
 
 /* ========== HEADER ========== */
-.header {
+.site-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: rgba(51, 51, 51, 0.9);
-  padding: 10px 8%;
+  padding: 10px 20px;
   color: white;
+  position: relative;
   width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
-.d_h {
+/* LOGO */
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+/* MENU CHÍNH */
+.nav-menu {
   display: flex;
 }
-
-.d_h a {
+.nav-menu__item {
   margin-right: 30px;
   text-decoration: none;
-  padding: 8px 0;
+  padding: 5px 0;
   white-space: nowrap;
   color: white;
-  font-weight: 500;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease;
 }
-
-.d_h a:hover {
+.nav-menu__item:hover {
   background-color: rgb(74, 70, 150);
   padding: 8px 10px;
   border-radius: 6px;
 }
-
-.d_h a:last-child {
+.nav-menu__item:last-child {
   margin-right: 0;
 }
 
-/* ========== SEARCH BAR ========== */
-.search_bar {
+/* THANH TÌM KIẾM */
+.header-search {
   display: flex;
   align-items: center;
 }
-
-.search_bar input {
+.header-search input {
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
   outline: none;
   margin-right: 5px;
 }
-
-.search_bar button {
+.header-search button {
   background-color: #007bff;
   color: white;
   padding: 8px 12px;
@@ -70,9 +79,12 @@ body {
   align-items: center;
   justify-content: center;
 }
+.header-search button i {
+  margin-left: 0;
+}
 
-/* ========== HAMBURGER MENU ========== */
-.hamburger-menu {
+/* NÚT MENU MOBILE */
+.menu-toggle {
   display: none;
   cursor: pointer;
   flex-direction: column;
@@ -81,8 +93,7 @@ body {
   height: 25px;
   z-index: 1001;
 }
-
-.hamburger-menu .bar {
+.menu-toggle .bar {
   width: 100%;
   height: 3px;
   background-color: white;
@@ -92,38 +103,36 @@ body {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 992px) {
-  .d_h {
+  .nav-menu {
     display: none;
     flex-direction: column;
-    width: 60%;
+    width: 40%;
     position: absolute;
-    top: 70px;
-    left: 20%;
-    background-color: rgba(51, 51, 51, 0.95);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    top: 80px;
+    left: 40.7%;
+    color: white;
+    background-color: rgba(51, 51, 51, 0.9);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     animation: slideDown 0.3s ease-out forwards;
   }
-
-  .d_h.active {
+  .nav-menu.active {
     display: flex;
   }
-
-  .d_h a {
+  .nav-menu__item {
     text-align: center;
     padding: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-right: 0;
   }
-
-  .d_h a:last-child {
+  .nav-menu__item:last-child {
     border-bottom: none;
   }
-
-  .hamburger-menu {
+  .menu-toggle {
     display: flex;
   }
 }
 
+/* Hiệu ứng trượt xuống */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -138,26 +147,25 @@ body {
 /* ========== MAIN ========== */
 main {
   max-width: 1200px;
-  margin: 30px auto; /* cách header 1 khoảng đều */
-  padding: 20px 8%;
+  margin: 40px auto;
+  padding: 20px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.9);
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 main h1 {
   font-size: 2.4rem;
   margin-bottom: 30px;
-  color: #222;
+  color: #333;
   font-weight: 700;
 }
 
-.product-list {
+/* ========== PRODUCT SECTION ========== */
+.product-section {
   margin-bottom: 60px;
 }
-
-.product-list h2 {
+.product-section h2 {
   font-size: 2rem;
   color: #222;
   margin-bottom: 25px;
@@ -165,15 +173,16 @@ main h1 {
   letter-spacing: 1px;
 }
 
-.product-container {
+/* GRID */
+.product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
   justify-items: center;
 }
 
-/* ========== PRODUCT ========== */
-.product {
+/* CARD */
+.product-card {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 12px;
@@ -181,33 +190,28 @@ main h1 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
-
-.product:hover {
+.product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
-
-.product img {
+.product-card img {
   width: 100%;
   height: 180px;
   border-radius: 8px;
   object-fit: cover;
   margin-bottom: 12px;
 }
-
-.product h3 {
+.product-card h3 {
   font-size: 1.8rem;
   color: #111;
   margin-bottom: 6px;
 }
-
-.product p {
+.product-card p {
   font-size: 1.4rem;
   color: #666;
   margin-bottom: 8px;
 }
-
-.product input {
+.product-card input {
   width: 70%;
   padding: 8px;
   margin: 6px 0;
@@ -216,8 +220,7 @@ main h1 {
   font-size: 1.4rem;
   text-align: center;
 }
-
-.product button {
+.product-card button {
   background-color: #ff6600;
   color: white;
   border: none;
@@ -227,7 +230,6 @@ main h1 {
   cursor: pointer;
   transition: 0.3s;
 }
-
-.product button:hover {
+.product-card button:hover {
   background-color: #ff4500;
 }
