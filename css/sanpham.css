@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   background-image: url(/image/bg/br.jpg);
   background-position: center center;
@@ -8,41 +9,53 @@ html {
   min-height: 100vh;
   font-size: 62.5%;
 }
+
 body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
   margin: 0;
+  color: #333;
 }
+
+/* ========== HEADER ========== */
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color: rgba(51, 51, 51, 0.9); /* Màu nền header */
-  padding: 10px 20px;
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 10px 8%;
   color: white;
-  position: relative;
-  width: 100%;
   top: 0;
   left: 0;
+  width: 100%;
   z-index: 1000;
 }
+
 .d_h {
   display: flex;
 }
+
 .d_h a {
   margin-right: 30px;
   text-decoration: none;
-  padding: 5px 0;
+  padding: 8px 0;
   white-space: nowrap;
   color: white;
-}
-.d_h a:hover {
-  background-color: rgb(74, 70, 150);
-}
-.d_h a:last-child {
-  margin-right: 0; /* Bỏ margin cho phần tử cuối cùng */
+  font-weight: 500;
+  transition: background 0.3s;
 }
 
+.d_h a:hover {
+  background-color: rgb(74, 70, 150);
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.d_h a:last-child {
+  margin-right: 0;
+}
+
+/* ========== SEARCH BAR ========== */
 .search_bar {
   display: flex;
   align-items: center;
@@ -67,17 +80,15 @@ header {
   justify-content: center;
 }
 
-.search_bar button i {
-  margin-left: 0;
-}
+/* ========== HAMBURGER MENU ========== */
 .hamburger-menu {
-  display: none; /* Mặc định ẩn trên màn hình lớn */
+  display: none;
   cursor: pointer;
   flex-direction: column;
   justify-content: space-around;
   width: 30px;
   height: 25px;
-  z-index: 1001; /* Đảm bảo hamburger nằm trên menu */
+  z-index: 1001;
 }
 
 .hamburger-menu .bar {
@@ -85,57 +96,43 @@ header {
   height: 3px;
   background-color: white;
   border-radius: 5px;
-  transition: all 0.3s ease; /* Hiệu ứng mượt mà khi đổi */
+  transition: all 0.3s ease;
 }
 
-/* .hamburger-menu.active .bar:nth-child(1) {
-    transform: translateY(11px) rotate(45deg);
-}
-.hamburger-menu.active .bar:nth-child(2) {
-    opacity: 0; 
-}
-.hamburger-menu.active .bar:nth-child(3) {
-    transform: translateY(-11px) rotate(-45deg);
-}  */
-
-/* Responsive adjustments */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 992px) {
-  /* Áp dụng khi màn hình nhỏ hơn 992px */
   .d_h {
-    display: none; /* Ẩn menu chính trên màn hình nhỏ */
-    flex-direction: column; /* Hiển thị các mục theo cột */
-    width: 40%;
-    position: absolute; /* Đặt menu theo vị trí tuyệt đối */
-    top: 80px; /* Xuất hiện dưới header */
-    left: 40.7%;
-    color: white;
-    background-color: rgba(51, 51, 51, 0.9); /* Màu nền menu khi mở */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    animation: slideDown 0.3s ease-out forwards; /* Hiệu ứng trượt xuống */
+    display: none;
+    flex-direction: column;
+    width: 60%;
+    position: absolute;
+    top: 70px;
+    left: 20%;
+    background-color: rgba(51, 51, 51, 0.95);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.3s ease-out forwards;
   }
 
   .d_h.active {
-    /* Class này được thêm bằng JS khi menu mở */
-    display: flex; /* Hiển thị menu khi active */
+    display: flex;
   }
 
   .d_h a {
     text-align: center;
     padding: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Đường kẻ phân cách */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     margin-right: 0;
   }
 
   .d_h a:last-child {
-    border-bottom: none; /* Bỏ border cho mục cuối */
+    border-bottom: none;
   }
 
   .hamburger-menu {
-    display: flex; /* Hiển thị hamburger trên màn hình nhỏ */
+    display: flex;
   }
 }
 
-/* Keyframe animation cho menu trượt xuống */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -147,20 +144,21 @@ header {
   }
 }
 
-/* MAIN */
+/* ========== MAIN ========== */
 main {
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
+  margin: 30px auto; /* cách header 1 khoảng đều */
+  padding: 20px 8%;
   text-align: center;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 main h1 {
   font-size: 2.4rem;
   margin-bottom: 30px;
-  color: #333;
+  color: #222;
   font-weight: 700;
 }
 
@@ -183,7 +181,7 @@ main h1 {
   justify-items: center;
 }
 
-/*PRODUCT */
+/* ========== PRODUCT ========== */
 .product {
   background-color: #fff;
   border: 1px solid #ddd;
