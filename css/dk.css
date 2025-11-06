@@ -98,7 +98,7 @@ header {
 @media (max-width: 992px) { /* Áp dụng khi màn hình nhỏ hơn 992px */
     .d_h {
         display: none; /* Ẩn menu chính trên màn hình nhỏ */
-        flex-direction: column; /* Hiển thị các mục theo cột */
+        flex-direction: column; 
         width: 40%;
         position: absolute; /* Đặt menu theo vị trí tuyệt đối */
         top: 80px; /* Xuất hiện dưới header */
@@ -143,7 +143,7 @@ header {
 }
 main{
     position: relative;
-   min-height: 70vh;
+   min-height: 80vh;
 }
 .main{
   position: absolute;
@@ -181,4 +181,29 @@ main{
   transition: all 0.3s ease;
   margin-bottom:20px ;
 
+}
+.dk{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.dk button{
+    padding: 10px;
+    width: 80%;
+    border-radius: 40px;
+    margin-bottom: 10px;
+    background-color: palevioletred;
+    color: white;
+    font-size: 1.5rem;
+}
+.phu_de{
+    color: black;
+    
+}
+.phu_de a{
+   text-decoration: none;
+   color: aqua;
+}
+.phu_de a:hover{
+    color: yellow;
 }
