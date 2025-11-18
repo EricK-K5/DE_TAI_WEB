@@ -109,7 +109,7 @@ header {
         flex-direction: column; 
         width: 40%;
         position: absolute; /* Đặt menu theo vị trí tuyệt đối */
-        top: 80px; /* Xuất hiện dưới header */
+        top: 45px; /* Xuất hiện dưới header */
         left: 40.7%;
         color: white;
         background-color: rgba(51, 51, 51, 0.9); /* Màu nền menu khi mở */
@@ -247,3 +247,12 @@ footer{
   justify-content: center;
   margin: 5px;
 }
+.footer input{
+    padding: 5px;
+    margin: 5px;
+}
+ .footer button{
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(193, 35, 190);
+ }
