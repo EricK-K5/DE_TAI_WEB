@@ -263,12 +263,13 @@ footer{
     font-size: 30px;
     position: absolute;
     top: 35%;
-    left: 80%;
+    left: 78%;
+    color: #09b475;
  }
  #password_eror{
     font-size: 30px;
     position: absolute;
     top: 63%;
-    left: 80%;
+    left: 78%;
     color: #09b475;
  }

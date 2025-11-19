@@ -8,11 +8,18 @@ function ktmk()
     let check=true;
     if (PasswordInput.value.length<8)
     {
+        PasswordInput.style.border = '1px solid red';
+        PasswordInput.style.outline = 'none';
         password_error.textContent='❌';
         check=false;
     }
     else 
+    {
+        PasswordInput.style.border = '1px solid green';
+        PasswordInput.style.outline = 'none';
         password_error.textContent='✔';
+    }
+        
     return check;
 }
 function ktsdt()
@@ -21,6 +28,8 @@ function ktsdt()
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(phoneInput.value.trim()))
     {
+        PasswordInput.style.border = '1px solid red';
+        PasswordInput.style.outline = 'none';
         phone_error.textContent='❌';
         check=false;
     }
