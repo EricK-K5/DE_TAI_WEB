@@ -32,7 +32,7 @@
 
     <title>dang ky</title>
 </head>
-    <script src="index.js"></script>
+    <script src="./JS/index.js"></script>
 <body >
     <header class="header fixed">
         <div class="main-content">
@@ -58,13 +58,16 @@
     </header>
     <main>
         <div class="main">
-        <form action="">
+        <form name="design" id="form">
             <div class="tieu_de"><h2>Đăng Ký</h2></div>
             <div class="form">
-            <div><input type="text" placeholder="Tên tài Khoản"></div>
-            <div><input type="number" placeholder="Số điện thoại"></div>
-            <div><input type="email" placeholder="Email"></div>
-            <div><input type="password" placeholder="Mật khẩu"></div>
+            <div><input required type="text" placeholder="Tên tài Khoản" id="user" name="user"></div>
+            <p class="user_CB" style="color: red;"></p>
+            <div><input required type="text" placeholder="Số điện thoại" id="phone"></div>
+            <p id="phone_error"></p>
+            <div><input type="email" placeholder="Email" id="email"></div>
+            <div><input required type="password" placeholder="Mật khẩu" id="password"></div>
+            <p id="password_eror"></p>
             <div class="dk"><button type="submit"> Đăng Ký</button></div>
             <div class="phu_de">Đã có tài khoản? <a href="dangnhap.html" class="d_n">Đăng nhập</a></div>
             </div>
@@ -91,4 +94,5 @@
             <div>0796921214 (zalo)</div>
         </div></div>
     </footer>
+    <script src="./JS/DK.js"></script>
 </body>

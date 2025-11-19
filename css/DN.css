@@ -16,7 +16,6 @@ html{
   font-family: "Poppins", sans-serif;
   margin: 0;
   min-height: 100vh;
-  position: relative;
 }
 header {
     display: flex;
@@ -256,18 +255,4 @@ footer{
     padding: 5px;
     margin: 5px;
     background-color: rgb(193, 35, 190);
- }
- #phone_error{
-    margin: 3px;
-    text-align:left;
-    font-size: 30px;
-    position: absolute;
-    top: 35%;
-    left: 80%;
- }
- #password_eror{
-    font-size: 30px;
-    position: absolute;
-    top: 63%;
-    left: 80%;
  }
