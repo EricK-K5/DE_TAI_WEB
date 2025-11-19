@@ -1,16 +1,13 @@
-/* ========== RESET & CƠ BẢN ========== */
 * {
   box-sizing: border-box;
 }
-
 html {
   background-image: url(/image/bg/br.jpg);
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   min-height: 100vh;
   font-size: 62.5%;
 }
-
 body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
@@ -77,7 +74,9 @@ body {
   align-items: center;
   justify-content: center;
 }
-
+.header-search button i {
+  margin-left: 0;
+}
 /* NÚT MENU MOBILE */
 .menu-toggle {
   display: none;
@@ -86,6 +85,7 @@ body {
   justify-content: space-around;
   width: 30px;
   height: 25px;
+  z-index: 1001;
 }
 .menu-toggle .bar {
   width: 100%;
@@ -103,7 +103,8 @@ body {
     width: 40%;
     position: absolute;
     top: 80px;
-    left: 40%;
+    left: 40.7%;
+    color: white;
     background-color: rgba(51, 51, 51, 0.9);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     animation: slideDown 0.3s ease-out forwards;
@@ -125,6 +126,7 @@ body {
   }
 }
 
+/* Hiệu ứng trượt xuống */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -186,14 +188,22 @@ body {
   margin-bottom: 18px;
   color: #fff;
 }
-.section-title {
+
+.product-section {
+  margin-top: 40px;
+  border: 2px solid whitesmoke;
+  border-radius: 12px;
+}
+.product-section .section-title {
+  padding-top: 12px;
   text-align: center;
   font-size: 2rem;
   margin-bottom: 14px;
+  color: whitesmoke;
 }
 
 /* GRID */
-.product-grid {
+.product-section .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 18px;
@@ -205,7 +215,7 @@ body {
   padding: 12px;
   border-radius: 10px;
   text-align: center;
-  transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+  transition: transform 0.18s, box-shadow 0.18s, 0.18s;
   overflow: hidden;
 }
 .product-card:hover {
@@ -214,10 +224,10 @@ body {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
-/* IMAGE: use ratio box so img never gets huge */
+/* IMAGE */
 .img-box {
   width: 100%;
-  height: 150px; /* fixed visual height for all cards */
+  height: 150px;
   overflow: hidden;
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.12);
@@ -225,7 +235,7 @@ body {
 .img-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* keep ratio, crop center */
+  object-fit: cover;
   display: block;
   transition: transform 0.35s;
 }
@@ -312,20 +322,19 @@ body {
 }
 /* ====== SALE ====== */
 .product-section.sale {
-  border: 2px solid #ffd27f; /* viền vàng nhấn mạnh */
-  padding: 12px;
+  border: 2px solid #ffd27f;
   border-radius: 12px;
   margin-top: 40px;
 }
 
 /* TITLE SALE */
 .product-section.sale .section-title {
-  color: #ffd27f; /* vàng nổi bật */
+  color: #ffd27f;
 }
 
 /* CARD SALE */
 .product-section.sale .product-card {
-  background: rgba(255, 210, 127, 0.1); /* nền sáng hơn để nhấn sale */
+  background: rgba(255, 210, 127, 0.1);
 }
 .product-section.sale .product-card:hover {
   background: rgba(255, 210, 127, 0.2);
