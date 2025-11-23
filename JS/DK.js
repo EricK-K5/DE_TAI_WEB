@@ -73,3 +73,10 @@ form.addEventListener('submit',(e)=>{
 
     }    
 })
+var hien_mk=document.getElementById('hien_mk');
+hien_mk.addEventListener('change',(e)=>{
+    if (e.target.checked)
+        document.getElementById('password').type='text';
+    else
+        document.getElementById('password').type="password";
+})
