@@ -113,7 +113,7 @@ header {
         flex-direction: column; 
         width: 40%;
         position: absolute; /* Đặt menu theo vị trí tuyệt đối */
-        top: 45px; /* Xuất hiện dưới header */
+        top: 60%; /* Xuất hiện dưới header */
         left: 40.7%;
         color: white;
         background-color: rgba(51, 51, 51, 0.9); /* Màu nền menu khi mở */
@@ -154,7 +154,7 @@ header {
     }
 }
 main{
-    position: relative;
+  position: relative;
    min-height: 0;
    flex-grow: 1;
    display: flex;
@@ -285,4 +285,17 @@ main{
   border-top: 1px solid #444;
   font-size: 14px;
   color: #ccc;
+}
+.icon_phone,.icon_pw{
+  display: flex;
+  position: relative;
+}
+#phone_error,#password_eror{
+  text-align: center;
+  position: absolute;
+  right: 2%;
+  top: 14%;
+  float: right;
+  color: green;
+  font-size: 3rem;
 }
