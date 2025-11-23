@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cartCount.textContent = totalItems;
 
       showPopup("Sản phẩm đã được thêm vào giỏ hàng!");
+      addToCart(productCard, quantity);
     });
   });
 
