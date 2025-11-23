@@ -28,13 +28,18 @@ function ktsdt()
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(phoneInput.value.trim()))
     {
-        PasswordInput.style.border = '1px solid red';
-        PasswordInput.style.outline = 'none';
+        phoneInput.style.border = '1px solid red';
+        phoneInput.style.outline = 'none';
         phone_error.textContent='❌';
         check=false;
     }
     else 
-       phone_error.textContent='✔';
+    {
+        phoneInput.style.border = '1px solid green';
+       phoneInput.style.outline = 'none';
+        phone_error.textContent='✔';
+    }
+       
     return check;
 }
 PasswordInput.addEventListener('input', ktmk);
