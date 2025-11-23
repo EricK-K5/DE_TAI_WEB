@@ -59,6 +59,7 @@ form.addEventListener("submit", (e) => {
       return;
     }
 
+<<<<<<< HEAD
     const nhap = {
       user: document.getElementById("user").value.trim(),
       phone: phoneInput.value,
@@ -70,3 +71,25 @@ form.addEventListener("submit", (e) => {
     window.location.href = "./dangnhap.html";
   }
 });
+=======
+
+        const nhap={
+            user: document.getElementById('user').value.trim(),
+            phone:phoneInput.value,
+            password:PasswordInput.value
+        }
+        users.push(nhap);
+        localStorage.setItem('users', JSON.stringify(users));
+        alert('✅ Đăng ký thành công! Đang chuyển đến trang Đăng nhập.');
+        window.location.href = './dangnhap.html';
+
+    }    
+})
+var hien_mk=document.getElementById('hien_mk');
+hien_mk.addEventListener('change',(e)=>{
+    if (e.target.checked)
+        document.getElementById('password').type='text';
+    else
+        document.getElementById('password').type="password";
+})
+>>>>>>> 4c9c191a89647e745df458d182aa492a0e88a7d7
