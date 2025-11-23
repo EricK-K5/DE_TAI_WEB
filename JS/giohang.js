@@ -54,7 +54,6 @@ function renderCart() {
             </div>
             <i class="ri-delete-bin-line cart-remove"></i>
         `;
-
         cartContent.appendChild(cartCard);
     });
 }
