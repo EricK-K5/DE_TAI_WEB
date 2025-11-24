@@ -1,28 +1,21 @@
-var form= document.getElementById('form');
-form.addEventListener('submit',(e)=>{
-    e.preventDefault();
-    var user=document.getElementById('user').value.trim();
-    var password=document.getElementById('password').value.trim();
-    const usersJSON = localStorage.getItem('users');
-    const users = usersJSON ? JSON.parse(usersJSON) : [];
-    var check=0;
-    for (let i=0;i<users.length;i++)
-    {
-        if (users[i].user===user&& users[i].password===password)
-            check=1;
-    }
-    if (check===1) 
-    {
-        localStorage.setItem("currentUser", user);
-        window.location.href='./trangchu.html';
-    }
-    else
-        alert('Tên tài khoản hoặc mật khẩu không đúng')
-})
-var hien_mk=document.getElementById('hien_mk');
-hien_mk.addEventListener('change',(e)=>{
-    if (e.target.checked)
-        document.getElementById('password').type='text';
-    else
-        document.getElementById('password').type="password";
-})
+var form = document.getElementById("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  var user = document.getElementById("user").value.trim();
+  var password = document.getElementById("password").value.trim();
+  const usersJSON = localStorage.getItem("users");
+  const users = usersJSON ? JSON.parse(usersJSON) : [];
+  var check = 0;
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].user === user && users[i].password === password) check = 1;
+  }
+  if (check === 1) {
+    localStorage.setItem("currentUser", user);
+    window.location.href = "./trangchu.html";
+  } else alert("Tên tài khoản hoặc mật khẩu không đúng");
+});
+var hien_mk = document.getElementById("hien_mk");
+hien_mk.addEventListener("change", (e) => {
+  if (e.target.checked) document.getElementById("password").type = "text";
+  else document.getElementById("password").type = "password";
+});
