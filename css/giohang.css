@@ -27,42 +27,42 @@ body {
 }
 /* LOGO */
 .logo img {
-    width: 120px;
-    height: auto;
+  width: 120px;
+  height: auto;
 }
 
 /* MENU CHÍNH */
 .nav-menu {
-    display: flex;
+  display: flex;
 }
 .nav-menu__item {
-    margin-right: 30px;
-    text-decoration: none;
-    padding: 5px 0;
-    white-space: nowrap;
-    color: white;
-    transition: background-color 0.3s ease;
+  margin-right: 30px;
+  text-decoration: none;
+  padding: 5px 0;
+  white-space: nowrap;
+  color: white;
+  transition: background-color 0.3s ease;
 }
 .nav-menu__item:hover {
-    background-color: rgb(74, 70, 150);
-    padding: 8px 10px;
-    border-radius: 6px;
+  background-color: rgb(74, 70, 150);
+  padding: 8px 10px;
+  border-radius: 6px;
 }
 .nav-menu__item:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 /* THANH TÌM KIẾM */
 .header-search {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .header-search input {
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    outline: none;
-    margin-right: 5px;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 5px;
 }
 .header-search button {
   background-color: #007bff;
@@ -97,7 +97,7 @@ body {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 992px) {
-.nav-menu {
+  .nav-menu {
     display: none;
     flex-direction: column;
     width: 40%;
@@ -108,43 +108,42 @@ body {
     background-color: rgba(51, 51, 51, 0.9);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     animation: slideDown 0.3s ease-out forwards;
-}
-.nav-menu.active {
+  }
+  .nav-menu.active {
     display: flex;
-}
-.nav-menu__item {
+  }
+  .nav-menu__item {
     text-align: center;
     padding: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-right: 0;
-
-}
-.nav-menu__item:last-child {
+  }
+  .nav-menu__item:last-child {
     border-bottom: none;
-}
-.menu-toggle {
+  }
+  .menu-toggle {
     display: flex;
-}
+  }
 }
 
 /* Hiệu ứng trượt xuống */
 @keyframes slideDown {
-from {
+  from {
     opacity: 0;
     transform: translateY(-20px);
-}
-to {
+  }
+  to {
     opacity: 1;
     transform: translateY(0);
-}
+  }
 }
 
 /* Giỏ hàng */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 main {
@@ -176,23 +175,23 @@ main {
 }
 
 .cart-img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .cart-detail {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .cart-card {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
 }
 
 .cart-product-title {
@@ -222,9 +221,9 @@ main {
 }
 
 .cart-remove {
-    margin-left: auto;
-    cursor: pointer;
-    font-size: 20px;
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 .total {
@@ -251,4 +250,71 @@ main {
   color: #fff;
   margin: 20px auto 0;
   cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  background: #1f1f1f;
+  color: #fff;
+  padding: 50px 0 20px;
+  margin-top: 50px;
+  font-size: 15px;
+}
+
+.footer .footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer .footer-col .footer-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ffcc00;
+  font-weight: 600;
+}
+
+.footer .footer-col .footer-text {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.footer .footer-col .footer-list li {
+  margin-bottom: 10px;
+}
+
+.footer .footer-col .footer-list a {
+  color: #ddd;
+  transition: 0.25s;
+}
+
+.footer .footer-col .footer-list a:hover {
+  color: #ffcc00;
+}
+.footer .footer-col .footer-social {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer .footer-col .footer-social a:hover {
+  color: blue;
+}
+
+.footer .footer-col .footer-social .social-link {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+  color: #ccc;
 }
