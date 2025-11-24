@@ -121,16 +121,10 @@
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
-
-      <div class="header-search">
-        <input type="text" placeholder="Tìm kiếm sản phẩm" />
-        <button>Tìm</button>
-      </div>
     </header>
 
     <!-- MAIN -->
     <main class="container py-5">
-      <!-- VIDEO BACKGROUND -->
       <section class="video-section mb-4">
         <video autoplay muted loop>
           <source
@@ -143,44 +137,63 @@
         Chuyên kinh doanh các loại mặt hàng
       </h1>
       <div class="row g-4 justify-content-center align-items-center">
-        <div class="col-12 col-md-4 text-center" id="photo1a">
-          <img
-            src="./image/Headphone/3.jpg"
-            class="img-fluid rounded shadow"
-            alt="Headphone"
-          />
+        <div
+          class="col-12 col-md-4 text-center product-item-toggle"
+          data-target="detail-headphone"
+        >
+          <div id="photo1a" class="toggle-trigger">
+            <img
+              src="./image/Headphone/3.jpg"
+              class="img-fluid rounded shadow"
+              alt="Headphone"
+            />
+          </div>
         </div>
 
-        <div class="col-12 col-md-4 text-center" id="photo2a">
-          <img
-            src="./image/Mouse/3.jpg"
-            class="img-fluid rounded shadow"
-            alt="Mouse"
-          />
+        <div
+          class="col-12 col-md-4 text-center product-item-toggle"
+          data-target="detail-mouse"
+        >
+          <div id="photo2a" class="toggle-trigger">
+            <img
+              src="./image/Mouse/3.jpg"
+              class="img-fluid rounded shadow"
+              alt="Mouse"
+            />
+          </div>
         </div>
 
-        <div class="col-12 col-md-4 text-center" id="photo3a">
-          <img
-            src="./image/keyboard/2.jpg"
-            class="img-fluid rounded shadow"
-            alt="Keyboard"
-          />
+        <div
+          class="col-12 col-md-4 text-center product-item-toggle"
+          data-target="detail-keyboard"
+        >
+          <div id="photo3a" class="toggle-trigger">
+            <img
+              src="./image/keyboard/2.jpg"
+              class="img-fluid rounded shadow"
+              alt="Keyboard"
+            />
+          </div>
         </div>
       </div>
+
       <div class="col-12 text-center mt-5">
         <a href="sanpham.html" class="btn btn-warning btn-lg shadow"
           >Tìm hiểu thêm</a
         >
       </div>
-      <!-- anh 1 -->
-      <div class="col-12 col-md-4 text-center" id="photo1">
-        <div id="icon1">❌</div>
+
+      <div
+        class="col-12 col-md-4 text-center product-detail-content hidden"
+        id="photo1"
+      >
+        <div id="icon1" class="close-detail-btn">❌</div>
         <img
           src="./image/Headphone/3.jpg"
           class="img-fluid rounded shadow"
           alt="Headphone"
         />
-        <p photo1_content>
+        <p class="product-summary-text">
           Tai nghe máy tính mang đến âm thanh sống động, rõ nét và chân thực. Dù
           bạn nghe nhạc, xem phim hay chơi game, tai nghe đều cho cảm giác đeo
           êm ái và chống ồn hiệu quả. Sản phẩm có micro sắc nét, âm bass mạnh và
@@ -191,15 +204,18 @@
           <a href="sanpham.html#headphone" class="lienket">Đi đến ngay</a>
         </div>
       </div>
-      <!-- anh2 -->
-      <div class="col-12 col-md-4 text-center" id="photo2">
-        <div id="icon2">❌</div>
+
+      <div
+        class="col-12 col-md-4 text-center product-detail-content hidden"
+        id="photo2"
+      >
+        <div id="icon2" class="close-detail-btn">❌</div>
         <img
           src="./image/Mouse/3.jpg"
           class="img-fluid rounded shadow"
           alt="Mouse"
         />
-        <p photo1_content>
+        <p class="product-summary-text">
           Chuột máy tính của chúng tôi mang đến độ chính xác cao, tốc độ phản
           hồi nhanh và cảm giác cầm nắm thoải mái. Từ chuột văn phòng nhẹ nhàng,
           bền bỉ đến chuột gaming DPI cao dành cho game thủ, tất cả đều được lựa
@@ -207,20 +223,23 @@
         </p>
         <div><a href="sanpham.html#mouse" class="lienket">Đi đến ngay</a></div>
       </div>
-      <!-- hinh3 -->
-      <div class="col-12 col-md-4 text-center" id="photo3">
-        <div id="icon3">❌</div>
+
+      <div
+        class="col-12 col-md-4 text-center product-detail-content hidden"
+        id="photo3"
+      >
+        <div id="icon3" class="close-detail-btn">❌</div>
         <img
           src="./image/keyboard/2.jpg"
           class="img-fluid rounded shadow"
           alt="Headphone"
         />
-        <p photo1_content>
+        <p class="product-summary-text">
           Bàn phím cơ mang lại trải nghiệm gõ phím tuyệt vời với độ nảy tốt, âm
           thanh rõ ràng và cảm giác bấm mượt mà. Cửa hàng cung cấp nhiều loại
           switch, thiết kế và layout phù hợp cho cả học tập, làm việc hoặc chơi
           game. Bàn phím được chế tạo từ vật liệu bền, led RGB nổi bật và độ bền
-          lên đến hàng chục triệu lần nhấn.Tai Nghe Máy Tính
+          lên đến hàng chục triệu lần nhấn.
         </p>
         <div>
           <a href="sanpham.html#keyboard" class="lienket">Đi đến ngay</a>
