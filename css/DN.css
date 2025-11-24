@@ -181,7 +181,7 @@ main{
   font-weight: 700;
 
 }
-.form input:not([type="checkbox"]) {
+.form input{
   text-align: left;
   width: 100%;
   padding: 14px;
@@ -298,11 +298,4 @@ main{
   float: right;
   color: green;
   font-size: 3rem;
-}
-#omk{
-  display: flex;
-  align-items: center;
-  gap: 4px; 
-  width: 100%;
-  margin-top: -10px;
 }
