@@ -74,9 +74,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.header-search button i {
-  margin-left: 0;
-}
+
 /* NÚT MENU MOBILE */
 .menu-toggle {
   display: none;
