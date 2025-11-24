@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const addCartButtons = document.querySelectorAll(".add-cart-btn");
+  // ================== GIỎ HÀNG ==================
+  const addCartButtons = document.querySelectorAll(".btn-add-cart");
   const cartCount = document.getElementById("cart-count");
   const popup = document.getElementById("popup-cart");
 
@@ -8,60 +9,38 @@ document.addEventListener("DOMContentLoaded", () => {
   addCartButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
       const productCard = e.target.closest(".product-card");
-      const qtyInput = productCard.querySelector(".qty-input");
+      const qtyInput = productCard.querySelector(".qty-input") || { value: 1 };
       const quantity = parseInt(qtyInput.value);
 
       totalItems += quantity;
-      cartCount.textContent = totalItems;
+      if (cartCount) cartCount.textContent = totalItems;
 
       showPopup("Sản phẩm đã được thêm vào giỏ hàng!");
+      // addToCart(productCard, quantity); // Gọi hàm xử lý giỏ hàng nếu có
     });
   });
 
   function showPopup(message) {
+    if (!popup) return;
     popup.textContent = message;
     popup.classList.add("show");
-
     setTimeout(() => {
       popup.classList.remove("show");
     }, 2000);
   }
+
+  // ================== TÌM KIẾM SẢN PHẨM ==================
   const searchInput = document.querySelector(".header-search input");
   const searchButton = document.querySelector(".header-search button");
   const products = document.querySelectorAll(".product-card");
 
   function filterProducts() {
     const query = searchInput.value.toLowerCase();
-
-    products.forEach((product) => {
-      const name = product
-        .querySelector(".product-name")
-        .textContent.toLowerCase();
-      if (name.includes(query)) {
-        product.style.display = "block";
-      } else {
-        product.style.display = "none";
-      }
-    });
-  }
-
-  searchButton.addEventListener("click", filterProducts);
-
-  // Thêm tính năng Enter để tìm kiếm khi nhấn Enter
-  searchInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-      filterProducts();
-    }
-  });
-  function filterProducts() {
-    const query = searchInput.value.toLowerCase();
     let found = false;
 
-    // Ẩn tất cả sản phẩm tham khảo chatgpt
     products.forEach((product) => {
-      const name = product
-        .querySelector(".product-name")
-        .textContent.toLowerCase();
+      const nameElem = product.querySelector(".product-name") || product.querySelector(".card-title");
+      const name = nameElem.textContent.toLowerCase();
       if (name.includes(query)) {
         product.style.display = "block";
         found = true;
@@ -70,21 +49,26 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Ẩn toàn bộ section trước
+    // Ẩn section nếu không còn sản phẩm hiển thị
     const sections = document.querySelectorAll(".product-section");
-    sections.forEach((section) => (section.style.display = "none"));
-
-    // Chỉ hiển thị section nào có sản phẩm còn hiển thị
-    const visibleProducts = document.querySelectorAll(
-      ".product-card:not([style*='display: none'])"
-    );
-    visibleProducts.forEach((product) => {
-      product.closest(".product-section").style.display = "block";
+    sections.forEach((section) => {
+      const visible = section.querySelectorAll(".product-card:not([style*='display: none'])");
+      section.style.display = visible.length ? "block" : "none";
     });
 
-    // Nếu không tìm thấy sản phẩm nào
-    if (!found) {
-      alert("Không tìm thấy sản phẩm!");
-    }
+    if (!found) alert("Không tìm thấy sản phẩm!");
+  }
+
+  searchButton.addEventListener("click", filterProducts);
+  searchInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") filterProducts();
+  });
+
+  // ================== NÚT XEM TẤT CẢ SẢN PHẨM ==================
+  const viewAllBtn = document.getElementById("view-all-products");
+  if (viewAllBtn) {
+    viewAllBtn.addEventListener("click", () => {
+      window.location.href = "sanpham.html";
+    });
   }
 });
