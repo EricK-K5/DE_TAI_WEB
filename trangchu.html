@@ -1,132 +1,247 @@
 <!DOCTYPE html>
 <html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- FAVICON -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./ico/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./ico/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./ico/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./ico/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./ico/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./ico/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./ico/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./ico/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./ico/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./ico/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./ico/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./ico/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <title>Trang chủ</title>
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/trangchu.css" />
+    <style></style>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <!-- FAVICON -->
-  <link rel="apple-touch-icon" sizes="57x57" href="./ico/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="./ico/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="./ico/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="./ico/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="./ico/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="./ico/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="./ico/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="./ico/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./ico/apple-icon-180x180.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="./ico/android-icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./ico/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="./ico/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./ico/favicon-16x16.png" />
-  <link rel="manifest" href="./ico/manifest.json" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-  <title>Trang chủ</title>
-  <!-- Reset CSS -->
-  <link rel="stylesheet" href="/css/reset.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/trangchu.css">
-  <style>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-50">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="./image/Logo/xoane.png" alt="Logo CT188" width="120px" />
+          </a>
 
-  </style>
-</head>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainMenu"
+            aria-controls="mainMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-50">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="./image/Logo/xoane.png" alt="Logo CT188" width="120px" />
-        </a>
+          <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-light fw-bold"
+                  aria-current="page"
+                  href="trangchu.html"
+                  >Trang chủ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light fw-bold" href="sanpham.html"
+                  >Sản phẩm</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light fw-bold" href="giohang.html"
+                  >Giỏ hàng</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light fw-bold" href="dangky.html"
+                  >Đăng ký</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light fw-bold" href="dangnhap.html"
+                  >Đăng nhập</a
+                >
+              </li>
+            </ul>
+          </div>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
-          aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="mainMenu">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active text-light fw-bold" aria-current="page" href="trangchu.html">Trang chủ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light fw-bold" href="sanpham.html">Sản phẩm</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light fw-bold" href="giohang.html">Giỏ hàng</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light fw-bold" href="dangky.html">Đăng ký</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light fw-bold" href="dangnhap.html">Đăng nhập</a>
-            </li>
-          </ul>
+          <form class="d-flex ms-lg-auto">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Tìm kiếm sản phẩm"
+              aria-label="Search"
+            />
+            <button class="btn btn-primary" type="submit">Tìm</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <main class="container py-5">
+      <h1 class="text-center fw-bold mb-4">
+        Chuyên kinh doanh các loại mặt hàng
+      </h1>
+      <div class="row g-4 justify-content-center align-items-center">
+        <div class="col-12 col-md-4 text-center" id="photo1a">
+          <img
+            src="./image/Headphone/1.jpg"
+            class="img-fluid rounded shadow"
+            alt="Headphone"
+          />
         </div>
 
-        <form class="d-flex ms-lg-auto">
-          <input class="form-control me-2" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search">
-          <button class="btn btn-primary" type="submit">Tìm</button>
-        </form>
-      </div>
-    </nav>
-  </header>
-  <main class="container py-5">
-    <h1 class="text-center fw-bold mb-4">Chuyên kinh doanh các loại mặt hàng</h1>
-    <div class="row g-4 justify-content-center align-items-center">
+        <div class="col-12 col-md-4 text-center" id="photo2a">
+          <img
+            src="./image/Mouse/2.jpg"
+            class="img-fluid rounded shadow"
+            alt="Mouse"
+          />
+        </div>
 
-      <div class="col-12 col-md-4 text-center" id="photo1a">
-        <img src="./image/Headphone//ervo-rocks-Zam8TvEgN5o-unsplash.jpg" class="img-fluid rounded shadow"
-          alt="Headphone">
+        <div class="col-12 col-md-4 text-center" id="photo3a">
+          <img
+            src="./image/keyboard/2.jpg"
+            class="img-fluid rounded shadow"
+            alt="Keyboard"
+          />
+        </div>
       </div>
-
-      <div class="col-12 col-md-4 text-center" id="photo2a">
-        <img src="./image/Mouse/davidson-l-u-n-a-m9BpcOG4vus-unsplash.jpg" class="img-fluid rounded shadow" alt="Mouse">
+      <div class="col-12 text-center mt-5">
+        <a href="sanpham.html" class="btn btn-warning btn-lg shadow"
+          >Tìm hiểu thêm</a
+        >
       </div>
-
-      <div class="col-12 col-md-4 text-center" id="photo3a">
-        <img src="./image/keyboard/2.jpg" class="img-fluid rounded shadow" alt="Keyboard">
+      <!-- anh 1 -->
+      <div class="col-12 col-md-4 text-center" id="photo1">
+        <div id="icon1">❌</div>
+        <img
+          src="./image/Headphone/1.jpg"
+          class="img-fluid rounded shadow"
+          alt="Headphone"
+        />
+        <p photo1_content>
+          Tai nghe máy tính mang đến âm thanh sống động, rõ nét và chân thực. Dù
+          bạn nghe nhạc, xem phim hay chơi game, tai nghe đều cho cảm giác đeo
+          êm ái và chống ồn hiệu quả. Sản phẩm có micro sắc nét, âm bass mạnh và
+          chất lượng hoàn thiện cao, phù hợp cho mọi nhu cầu giải trí và giao
+          tiếp.
+        </p>
+        <div>
+          <a href="sanpham.html#headphone" class="lienket">Đi đến ngay</a>
+        </div>
       </div>
-
-    </div>
-    <div class="col-12 text-center mt-5"><a href="sanpham.html" class="btn btn-warning btn-lg shadow">Tìm hiểu thêm</a>
-    </div>
-    <!-- anh 1 -->
-    <div class="col-12 col-md-4 text-center" id="photo1">
-      <div id="icon1">❌</div>
-      <img src="./image/Headphone//ervo-rocks-Zam8TvEgN5o-unsplash.jpg" class="img-fluid rounded shadow"
-        alt="Headphone">
-      <p photo1_content>Tai nghe máy tính mang đến âm thanh sống động,
-        rõ nét và chân thực. Dù bạn nghe nhạc, xem phim hay chơi game,
-        tai nghe đều cho cảm giác đeo êm ái và chống ồn hiệu quả. Sản phẩm có micro sắc nét, âm bass mạnh và chất lượng
-        hoàn thiện cao, phù
-        hợp cho mọi nhu cầu giải trí và giao tiếp.</p>
-        <div ><a href="sanpham.html#headphone" class="lienket">Đi đến ngay</a></div>
-    </div>
-    <!-- anh2 -->
-    <div class="col-12 col-md-4 text-center" id="photo2">
-      <div id="icon2">❌</div>
-      <img src="./image/Mouse/davidson-l-u-n-a-m9BpcOG4vus-unsplash.jpg" class="img-fluid rounded shadow"
-        alt="Headphone">
-      <p photo1_content>Chuột máy tính của chúng tôi mang đến độ chính xác cao, 
-        tốc độ phản hồi nhanh và cảm giác cầm nắm thoải mái. Từ chuột văn phòng nhẹ nhàng,
-         bền bỉ đến chuột gaming DPI cao dành cho game thủ, 
-        tất cả đều được lựa chọn kỹ lưỡng để đảm bảo hiệu suất và độ ổn định tối đa khi sử dụng.</p>
-        <div ><a href="sanpham.html#mouse" class="lienket">Đi đến ngay</a></div>
-    </div>
-    <!-- hinh3 -->
-       <div class="col-12 col-md-4 text-center" id="photo3">
-      <div id="icon3">❌</div>
-      <img src="./image/keyboard/2.jpg" class="img-fluid rounded shadow"
-        alt="Headphone">
-      <p photo1_content>Bàn phím cơ mang lại trải nghiệm gõ phím tuyệt vời với độ nảy tốt, 
-        âm thanh rõ ràng và cảm giác bấm mượt mà. Cửa hàng cung cấp nhiều loại switch, 
-        thiết kế và layout phù hợp cho cả học tập, làm việc hoặc chơi game. Bàn phím được chế tạo từ vật liệu bền, 
-        led RGB nổi bật và độ bền lên đến hàng chục triệu lần nhấn.Tai Nghe Máy Tính</p>
-        <div ><a href="sanpham.html#keyboard" class="lienket">Đi đến ngay</a></div>
-    </div>
-  </main>
-  <footer class="footer">
+      <!-- anh2 -->
+      <div class="col-12 col-md-4 text-center" id="photo2">
+        <div id="icon2">❌</div>
+        <img
+          src="./image/Mouse/2.jpg"
+          class="img-fluid rounded shadow"
+          alt="Headphone"
+        />
+        <p photo1_content>
+          Chuột máy tính của chúng tôi mang đến độ chính xác cao, tốc độ phản
+          hồi nhanh và cảm giác cầm nắm thoải mái. Từ chuột văn phòng nhẹ nhàng,
+          bền bỉ đến chuột gaming DPI cao dành cho game thủ, tất cả đều được lựa
+          chọn kỹ lưỡng để đảm bảo hiệu suất và độ ổn định tối đa khi sử dụng.
+        </p>
+        <div><a href="sanpham.html#mouse" class="lienket">Đi đến ngay</a></div>
+      </div>
+      <!-- hinh3 -->
+      <div class="col-12 col-md-4 text-center" id="photo3">
+        <div id="icon3">❌</div>
+        <img
+          src="./image/keyboard/2.jpg"
+          class="img-fluid rounded shadow"
+          alt="Headphone"
+        />
+        <p photo1_content>
+          Bàn phím cơ mang lại trải nghiệm gõ phím tuyệt vời với độ nảy tốt, âm
+          thanh rõ ràng và cảm giác bấm mượt mà. Cửa hàng cung cấp nhiều loại
+          switch, thiết kế và layout phù hợp cho cả học tập, làm việc hoặc chơi
+          game. Bàn phím được chế tạo từ vật liệu bền, led RGB nổi bật và độ bền
+          lên đến hàng chục triệu lần nhấn.Tai Nghe Máy Tính
+        </p>
+        <div>
+          <a href="sanpham.html#keyboard" class="lienket">Đi đến ngay</a>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
       <div class="footer-container">
         <!-- Cột 1: Giới thiệu -->
         <div class="footer-col">
@@ -188,8 +303,7 @@
         <p>© 2025 - Cửa hàng phụ kiện máy tính.</p>
       </div>
     </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./JS/trangchu.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./JS/trangchu.js"></script>
+  </body>
 </html>
