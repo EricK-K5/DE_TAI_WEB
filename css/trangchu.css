@@ -2,60 +2,205 @@
 /* CSS CHO POPUP CHI TIẾT SẢN PHẨM (#photo1) */
 /* (Phạm vi giới hạn, không ảnh hưởng tới main img) */
 /* =========================================== */
+* {
+  box-sizing: border-box;
+}
+html {
+  background-image: url(/image/bg/br.jpg);
+  background-position: center center;
+  background-size: cover;
+  font-size: 62.5%;
+}
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
 
-#photo1,#photo2,#photo3 {
-    /* VỊ TRÍ & CĂN GIỮA TUYỆT ĐỐI */
-    position: fixed; /* Giữ popup ở giữa ngay cả khi cuộn */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    /* GIAO DIỆN & KÍCH THƯỚC */
-    width: 90%; 
-    max-width: 600px; /* Giới hạn chiều rộng tối đa */
-    background-color: #ffffff; /* Nền trắng (Nổi bật trên nền body tối) */
-    color: #333333; /* Màu chữ tối cho dễ đọc */
-    padding: 30px; 
-    border-radius: 8px; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Đổ bóng sâu, tạo cảm giác nổi */
-    z-index: 1050; /* Đặt trên các phần tử khác */
-    
-    /* HIỂN THỊ */
-    display:none ; /* Rất quan trọng: Ẩn ban đầu, cần JS để hiển thị */
-    text-align: left; /* Căn lề trái cho nội dung popup */
+/* ========== HEADER ========== */
+.site-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 10px 20px;
+  color: white;
+  width: 100%;
+  position: relative;
+}
+/* LOGO */
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+/* MENU CHÍNH */
+.nav-menu {
+  display: flex;
+}
+.nav-menu__item {
+  margin-right: 30px;
+  text-decoration: none;
+  padding: 5px 0;
+  white-space: nowrap;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.nav-menu__item:hover {
+  background-color: rgb(74, 70, 150);
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.nav-menu__item:last-child {
+  margin-right: 0;
+}
+
+/* THANH TÌM KIẾM */
+.header-search {
+  display: flex;
+  align-items: center;
+}
+.header-search input {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 5px;
+}
+.header-search button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* NÚT MENU MOBILE */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  z-index: 1001;
+}
+.menu-toggle .bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 992px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 40%;
+    position: absolute;
+    top: 80px;
+    left: 40.7%;
+    color: white;
+    background-color: rgba(51, 51, 51, 0.9);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.3s ease-out forwards;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .nav-menu__item {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-right: 0;
+  }
+  .nav-menu__item:last-child {
+    border-bottom: none;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Hiệu ứng trượt xuống */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#photo1,
+#photo2,
+#photo3 {
+  /* VỊ TRÍ & CĂN GIỮA TUYỆT ĐỐI */
+  position: fixed; /* Giữ popup ở giữa ngay cả khi cuộn */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* GIAO DIỆN & KÍCH THƯỚC */
+  width: 90%;
+  max-width: 600px; /* Giới hạn chiều rộng tối đa */
+  background-color: #ffffff; /* Nền trắng (Nổi bật trên nền body tối) */
+  color: #333333; /* Màu chữ tối cho dễ đọc */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Đổ bóng sâu, tạo cảm giác nổi */
+  z-index: 1050; /* Đặt trên các phần tử khác */
+
+  /* HIỂN THỊ */
+  display: none; /* Rất quan trọng: Ẩn ban đầu, cần JS để hiển thị */
+  text-align: left; /* Căn lề trái cho nội dung popup */
 }
 
 /* Tùy chỉnh Nút Đóng Popup */
-#icon1,#icon2,#icon3 {
-    position: absolute;
-    right: 0px; 
-    top: 0px;
-    font-size: 24px;
-    cursor: pointer; 
-    color: #555;
-    z-index: 1051;
+#icon1,
+#icon2,
+#icon3 {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #555;
+  z-index: 1051;
 }
 
 /* Ảnh chỉ áp dụng cho ảnh bên trong #photo1 */
-#photo1 img,#photo2 img,#photo3 img {
-    max-width: 100%; 
-    height: auto;
-    margin-bottom: 20px;
-    display: block; 
+#photo1 img,
+#photo2 img,
+#photo3 img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  display: block;
 }
 
 /* Nội dung chi tiết trong Popup */
-#photo1 p,#photo2 p,#photo3 p {
-    line-height: 1.6; 
+#photo1 p,
+#photo2 p,
+#photo3 p {
+  line-height: 1.6;
 }
-.lienket{
+.lienket {
   text-decoration: none;
   padding: 10px;
-  border: solid  2px;
+  border: solid 2px;
   background-color: #be5393;
   color: white;
   border-radius: 45px;
 }
+/* FOOTER */
 .footer {
   background: #1f1f1f;
   color: #fff;
