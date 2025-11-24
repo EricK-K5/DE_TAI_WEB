@@ -17,7 +17,7 @@ body {
 /* ========== HEADER ========== */
 .site-header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(51, 51, 51, 0.9);
   padding: 10px 20px;
@@ -33,6 +33,7 @@ body {
 
 /* MENU CHÍNH */
 .nav-menu {
+  margin-right: 350px;
   display: flex;
 }
 .nav-menu__item {
@@ -52,28 +53,6 @@ body {
   margin-right: 0;
 }
 
-/* THANH TÌM KIẾM */
-.header-search {
-  display: flex;
-  align-items: center;
-}
-.header-search input {
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  outline: none;
-  margin-right: 5px;
-}
-.header-search button {
-  background-color: #007bff;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 /* NÚT MENU MOBILE */
 .menu-toggle {
   display: none;

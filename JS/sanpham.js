@@ -50,21 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchButton = document.querySelector(".header-search button");
   const products = document.querySelectorAll(".product-card");
 
-  function filterProducts() {
-    const query = searchInput.value.toLowerCase();
-
-    products.forEach((product) => {
-      const name = product
-        .querySelector(".product-name")
-        .textContent.toLowerCase();
-      if (name.includes(query)) {
-        product.style.display = "block";
-      } else {
-        product.style.display = "none";
-      }
-    });
-  }
-
   searchButton.addEventListener("click", filterProducts);
 
   // Thêm tính năng Enter để tìm kiếm khi nhấn Enter
