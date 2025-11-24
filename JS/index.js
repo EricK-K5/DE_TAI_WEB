@@ -10,3 +10,13 @@
         });
     })
 
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerMenu = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.nav-menu'); 
+
+        hamburgerMenu.addEventListener('click', function() {
+            hamburgerMenu.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+    })
+
