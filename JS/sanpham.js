@@ -1,4 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const currentUser = localStorage.getItem("currentUser");
+  const CART_KEY = `cart_${currentUser}`;
+  
+  function syncCartCount() {
+    const cartData = JSON.parse(localStorage.getItem(CART_KEY)) || [];
+    let total = 0;
+
+    cartData.forEach(item => {
+        total += item.quantity;
+    });
+
+    const cartCount = document.getElementById("cart-count");
+    if (cartCount) {
+        cartCount.textContent = total;
+    }
+  }
+
+  syncCartCount();
+
   const addCartButtons = document.querySelectorAll(".add-cart-btn");
   const cartCount = document.getElementById("cart-count");
   const popup = document.getElementById("popup-cart");
