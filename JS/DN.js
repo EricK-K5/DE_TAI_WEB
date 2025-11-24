@@ -13,6 +13,7 @@ form.addEventListener('submit',(e)=>{
     }
     if (check===1) 
     {
+        localStorage.setItem("currentUser", user);
         window.location.href='./trangchu.html';
     }
     else
