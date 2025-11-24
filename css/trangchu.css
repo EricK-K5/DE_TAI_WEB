@@ -3,63 +3,55 @@
 /* (Phạm vi giới hạn, không ảnh hưởng tới main img) */
 /* =========================================== */
 
-#photo1,
-#photo2,
-#photo3 {
-  /* VỊ TRÍ & CĂN GIỮA TUYỆT ĐỐI */
-  position: fixed; /* Giữ popup ở giữa ngay cả khi cuộn */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  /* GIAO DIỆN & KÍCH THƯỚC */
-  width: 90%;
-  max-width: 600px; /* Giới hạn chiều rộng tối đa */
-  background-color: #ffffff; /* Nền trắng (Nổi bật trên nền body tối) */
-  color: #333333; /* Màu chữ tối cho dễ đọc */
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Đổ bóng sâu, tạo cảm giác nổi */
-  z-index: 1050; /* Đặt trên các phần tử khác */
-
-  /* HIỂN THỊ */
-  display: none; /* Rất quan trọng: Ẩn ban đầu, cần JS để hiển thị */
-  text-align: left; /* Căn lề trái cho nội dung popup */
+#photo1,#photo2,#photo3 {
+    /* VỊ TRÍ & CĂN GIỮA TUYỆT ĐỐI */
+    position: fixed; /* Giữ popup ở giữa ngay cả khi cuộn */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* GIAO DIỆN & KÍCH THƯỚC */
+    width: 90%; 
+    max-width: 600px; /* Giới hạn chiều rộng tối đa */
+    background-color: #ffffff; /* Nền trắng (Nổi bật trên nền body tối) */
+    color: #333333; /* Màu chữ tối cho dễ đọc */
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Đổ bóng sâu, tạo cảm giác nổi */
+    z-index: 1050; /* Đặt trên các phần tử khác */
+    
+    /* HIỂN THỊ */
+    display:none ; /* Rất quan trọng: Ẩn ban đầu, cần JS để hiển thị */
+    text-align: left; /* Căn lề trái cho nội dung popup */
 }
 
 /* Tùy chỉnh Nút Đóng Popup */
-#icon1,
-#icon2,
-#icon3 {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #555;
-  z-index: 1051;
+#icon1,#icon2,#icon3 {
+    position: absolute;
+    right: 0px; 
+    top: 0px;
+    font-size: 24px;
+    cursor: pointer; 
+    color: #555;
+    z-index: 1051;
 }
 
 /* Ảnh chỉ áp dụng cho ảnh bên trong #photo1 */
-#photo1 img,
-#photo2 img,
-#photo3 img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-  display: block;
+#photo1 img,#photo2 img,#photo3 img {
+    max-width: 100%; 
+    height: auto;
+    margin-bottom: 20px;
+    display: block; 
 }
 
 /* Nội dung chi tiết trong Popup */
-#photo1 p,
-#photo2 p,
-#photo3 p {
-  line-height: 1.6;
+#photo1 p,#photo2 p,#photo3 p {
+    line-height: 1.6; 
 }
-.lienket {
+.lienket{
   text-decoration: none;
   padding: 10px;
-  border: solid 2px;
+  border: solid  2px;
   background-color: #be5393;
   color: white;
   border-radius: 45px;
