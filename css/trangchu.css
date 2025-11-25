@@ -50,7 +50,7 @@ body {
 }
 .nav-menu__item:hover {
   background-color: rgb(74, 70, 150);
-  padding: 8px 10px;
+  padding: 8px 20px;
   border-radius: 6px;
 }
 .nav-menu__item:last-child {
