@@ -33,6 +33,7 @@ body {
 
 /* MENU CHÍNH */
 .nav-menu {
+  margin-right: 350px;
   display: flex;
 }
 .nav-menu__item {
@@ -50,32 +51,6 @@ body {
 }
 .nav-menu__item:last-child {
   margin-right: 0;
-}
-
-/* THANH TÌM KIẾM */
-.header-search {
-  display: flex;
-  align-items: center;
-}
-.header-search input {
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  outline: none;
-  margin-right: 5px;
-}
-.header-search button {
-  background-color: #007bff;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.header-search button i {
-  margin-left: 0;
 }
 
 /* NÚT MENU MOBILE */
