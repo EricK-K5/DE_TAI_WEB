@@ -34,7 +34,6 @@ body {
 /* MENU CHÍNH */
 .nav-menu {
   display: flex;
-  margin-right: 350px;
 }
 .nav-menu__item {
   margin-right: 30px;
@@ -95,6 +94,11 @@ body {
     padding: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-right: 0;
+  }
+  .nav-menu__item:hover {
+    background-color: rgb(74, 70, 150);
+    padding: 15px;
+    border-radius: 0;
   }
   .nav-menu__item:last-child {
     border-bottom: none;

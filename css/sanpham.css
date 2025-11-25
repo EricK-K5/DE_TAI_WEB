@@ -126,6 +126,11 @@ body {
   .menu-toggle {
     display: flex;
   }
+  .nav-menu__item:hover {
+    background-color: rgb(74, 70, 150);
+    padding: 15px;
+    border-radius: 0;
+  }
 }
 @media (max-width: 600px) {
   .main-nav {
