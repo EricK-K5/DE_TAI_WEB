@@ -127,6 +127,12 @@ body {
     display: flex;
   }
 }
+@media (max-width: 600px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 /* Hiệu ứng trượt xuống */
 @keyframes slideDown {
@@ -174,14 +180,6 @@ body {
 .main-nav__item:hover {
   background-color: rgba(58, 47, 208, 0.9);
   transform: translateY(-2px);
-}
-
-/* responsive */
-@media (max-width: 600px) {
-  .main-nav {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 /* TITLES */
@@ -305,26 +303,6 @@ body {
   transform: translateY(0);
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .nav-menu {
-    display: none;
-    position: absolute;
-    right: 16px;
-    top: 64px;
-    background: rgba(0, 0, 0, 0.85);
-    padding: 12px;
-    border-radius: 8px;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .nav-menu.active {
-    display: flex;
-  }
-  .menu-toggle {
-    display: block;
-  }
-}
 /* ====== SALE ====== */
 .product-section.sale {
   border: 2px solid #ffd27f;
@@ -456,4 +434,24 @@ body {
   border-top: 1px solid #444;
   font-size: 14px;
   color: #ccc;
+}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 64px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 12px;
+    border-radius: 8px;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
 }
