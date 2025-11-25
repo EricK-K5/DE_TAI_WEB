@@ -33,6 +33,7 @@ body {
 
 /* MENU CHÍNH */
 .nav-menu {
+  margin-right: 350px;
   display: flex;
 }
 .nav-menu__item {
