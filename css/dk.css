@@ -198,6 +198,7 @@ main {
   color: yellow;
 }
 
+/* FOOTER */
 .footer {
   background: #1f1f1f;
   color: #fff;
@@ -210,46 +211,58 @@ main {
   width: 90%;
   max-width: 1200px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 40px;
 }
 
-.footer .footer-col .footer-title {
+.footer .footer-col {
+  flex: 1 1 220px;
+}
+
+.footer .footer-title {
   font-size: 18px;
   margin-bottom: 15px;
   color: #ffcc00;
   font-weight: 600;
 }
 
-.footer .footer-col .footer-text {
+.footer .footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .footer-text {
   line-height: 1.6;
   margin-bottom: 15px;
 }
 
-.footer .footer-col .footer-list li {
+.footer .footer-list li {
   margin-bottom: 10px;
 }
 
-.footer .footer-col .footer-list a {
+.footer .footer-list a {
   color: #ddd;
   transition: 0.25s;
 }
 
-.footer .footer-col .footer-list a:hover {
+.footer .footer-list a:hover {
   color: #ffcc00;
 }
-.footer .footer-col .footer-social {
+
+.footer-social {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.footer .footer-col .footer-social a:hover {
+.footer-social a:hover {
   color: blue;
 }
 
-.footer .footer-col .footer-social .social-link {
+.footer-social .social-link {
   display: flex;
   align-items: center;
   white-space: nowrap;

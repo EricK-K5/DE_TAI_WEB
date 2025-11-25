@@ -374,72 +374,6 @@ body {
   z-index: 10000;
 }
 
-/* FOOTER */
-.footer {
-  background: #1f1f1f;
-  color: #fff;
-  padding: 50px 0 20px;
-  margin-top: 50px;
-  font-size: 15px;
-}
-
-.footer .footer-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 40px;
-}
-
-.footer .footer-col .footer-title {
-  font-size: 18px;
-  margin-bottom: 15px;
-  color: #ffcc00;
-  font-weight: 600;
-}
-
-.footer .footer-col .footer-text {
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-.footer .footer-col .footer-list li {
-  margin-bottom: 10px;
-}
-
-.footer .footer-col .footer-list a {
-  color: #ddd;
-  transition: 0.25s;
-}
-
-.footer .footer-col .footer-list a:hover {
-  color: #ffcc00;
-}
-.footer .footer-col .footer-social {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.footer .footer-col .footer-social a:hover {
-  color: purple;
-}
-
-.footer .footer-col .footer-social .social-link {
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  margin-top: 20px;
-  border-top: 1px solid #444;
-  font-size: 14px;
-  color: #ccc;
-}
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .nav-menu {
@@ -459,4 +393,82 @@ body {
   .menu-toggle {
     display: block;
   }
+}
+/* FOOTER */
+.footer {
+  background: #1f1f1f;
+  color: #fff;
+  padding: 50px 0 20px;
+  margin-top: 50px;
+  font-size: 15px;
+}
+
+.footer .footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer .footer-col {
+  flex: 1 1 220px;
+}
+
+.footer .footer-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ffcc00;
+  font-weight: 600;
+}
+
+.footer .footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .footer-text {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.footer .footer-list li {
+  margin-bottom: 10px;
+}
+
+.footer .footer-list a {
+  color: #ddd;
+  transition: 0.25s;
+}
+
+.footer .footer-list a:hover {
+  color: #ffcc00;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-social a:hover {
+  color: blue;
+}
+
+.footer-social .social-link {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+  color: #ccc;
 }
